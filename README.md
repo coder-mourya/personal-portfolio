@@ -93,6 +93,6 @@ Contributions, issues, and feature requests are welcome! Feel free to check the 
 ## 📞 Contact
 
 For any questions or feedback, please reach out through:
-- Email: [your-email@example.com](mailto:your-email@example.com)
-- LinkedIn: [Your LinkedIn](https://linkedin.com/in/your-profile)
-- GitHub: [Your GitHub](https://github.com/your-username)
+- Email: [ajaykumarshakya560@gmail.com](mailto:ajaykumarshakya560@gmail.com)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/ajay-kumar-shakya/)
+<!-- - GitHub: [Your GitHub](https://github.com/your-username) -->
