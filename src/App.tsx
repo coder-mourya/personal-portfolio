@@ -20,25 +20,27 @@ function App() {
       title: "Niotek E-Commerce",
       description: "A full-featured e-commerce platform for bulk orders of electronic devices, with real-time inventory management, seamless payment processing, and an intuitive admin dashboard.",
       tech: ["React","Redux", "Node.js", "Express.js", "MongoDB",  "Bootstrap"],
-      image: "https://images.unsplash.com/photo-1661956602116-aa6865609028?auto=format&fit=crop&q=80&w=800"
+      image: "https://images.unsplash.com/photo-1524289286702-f07229da36f5?q=80&w=800&auto=format&fit=crop"
+
     },
     {
-      title: "Task Management System",
-      description: "Enterprise task management solution with real-time updates, team collaboration, and analytics dashboard.",
-      tech: ["TypeScript", "Next.js", "PostgreSQL", "WebSocket", "Docker"],
+      title: "CBT Static Business Website",
+      description: "A static business website showcasing services with a sleek design, fast performance, and essential company details.",
+      tech: ["React js", "Tailwind CSS", "Animate.css", "GSAP", "Framer Motion"],
       image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=800"
     },
     {
-      title: "Social Media Analytics",
-      description: "Analytics platform processing millions of social media posts using big data technologies.",
-      tech: ["Python", "React", "AWS", "Kafka", "ElasticSearch"],
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800"
+      title: "Sports Management App",
+      description: "A sports web application where players can create teams, book training sessions, and reserve stadium slots for various sports, ensuring seamless scheduling and team management.",
+      tech: ["React js","Redux","Bootstrap","Socket.io", "Swiper" ],
+      image: "https://plus.unsplash.com/premium_photo-1676634832558-6654a134e920?auto=format&fit=crop&q=80&w=800"
     },
     {
-      title: "AI-Powered Learning Platform",
-      description: "Adaptive learning platform using AI to personalize education paths and track student progress in real-time.",
-      tech: ["React", "TensorFlow.js", "Node.js", "GraphQL", "Firebase"],
-      image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=800"
+      title: "Veggie express",
+      description: "A web app where shopkeepers sell fresh vegetables, and users can browse, order online, and get doorstep delivery, ensuring convenience and freshness.",
+      tech: ["React", "Tailwind CSS", "React Slider"],
+      image: "https://images.unsplash.com/photo-1597362925123-77861d3fbac7?q=80&w=800&auto=format&fit=crop"
+
     }
   ];
 
@@ -53,6 +55,20 @@ function App() {
   const handleDownload = () => {
     window.open(Pdf, "_blank");
   };
+
+const   handleProjectClick  = (ele : string) => {
+  // console.log("element" , ele);
+  
+    if(ele === 'Niotek E-Commerce') {
+      window.open("https://niotek.in", "_blank");
+    } else if (ele === 'CBT Static Business Website') {
+      window.open("https://creativitybeyondthoughts.com", "_blank");
+    }else if (ele === 'Sports Management App') {
+      alert("This project is shut down by the client for more details contact Developer") 
+    }else if (ele === 'Veggie express') {
+      alert("This project is shut down by the client for more details contact Developer") 
+    }
+}
   
   
 
@@ -208,8 +224,9 @@ function App() {
                     <a 
                       href="#" 
                       className="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 mt-2"
+                      onClick={() => handleProjectClick(project.title)}
                     >
-                      View Project <ExternalLink size={16} />
+                      View Project <ExternalLink size={16}  />
                     </a>
                   </div>
                 </div>
