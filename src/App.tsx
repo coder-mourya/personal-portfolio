@@ -1,4 +1,4 @@
-// import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Github, Linkedin, Mail, ExternalLink, } from 'lucide-react';
 // import Pdf from '../assets/Resume.pdf';
 import profile from '../assets/profile.png';
@@ -6,16 +6,16 @@ import app from "../assets/app.jpg";
 import sport from "../assets/sport.jpg";
 
 function App() {
-  // const [isScrolled, setIsScrolled] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   // const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     setIsScrolled(window.scrollY > 50);
-  //   };
-  //   window.addEventListener('scroll', handleScroll);
-  //   return () => window.removeEventListener('scroll', handleScroll);
-  // }, []);
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const projects = [
     {
@@ -72,6 +72,12 @@ function App() {
     }
   }
 
+  const handleProject = () => {
+    const section = document.getElementById('projects');
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
 
 
   return (
@@ -131,10 +137,17 @@ function App() {
 
           {/* Buttons */}
           <div className="flex  sm:flex-row gap-4 items-center justify-center pt-4">
-            <button className="bg-blue-500 text-white px-6 py-3 rounded-md hover:bg-gray-800 transition">
-              Let’s Talk
-            </button>
-            <button className="border border-white px-6 py-3 rounded-md hover:bg-gray-100 hover:text-black transition">
+            <a
+              href="https://wa.me/+918979226642"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <button className="bg-blue-500 text-white px-6 py-3 rounded-md hover:bg-gray-800 transition">
+                Let’s Talk
+              </button>
+            </a>
+
+            <button onClick={handleProject} className="border border-white px-6 py-3 rounded-md hover:bg-gray-100 hover:text-black transition">
               View Projects
             </button>
           </div>
@@ -183,14 +196,15 @@ function App() {
               <h2 className="text-4xl font-bold mb-12 text-start">About Me</h2>
 
               <p>
-                I'm a Full Stack Developer, with a passion of clean code, scalable architecture, and meaningful results.
+                I'm a Full Stack Developer with a passion for clean code, scalable architecture, and meaningful results.
               </p>
               <p>
-                With 2 years of experience building real-world products for clients across multip's domains, I understand what It takes to tum an idea. into a functional, user-friendly app.
+                With 2 years of experience building real-world products for clients across multiple domains, I understand what it takes to turn an idea into a functional, user-friendly app.
               </p>
               <p>
-                I don't just write code- I solve business problems through technology
+                I don't just write code — I solve business problems through technology.
               </p>
+
             </div>
           </div>
         </div>
